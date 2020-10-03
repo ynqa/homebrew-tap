@@ -2,16 +2,16 @@
 class Diffy < Formula
   desc "Print colored diff more readable"
   homepage "https://github.com/ynqa/diffy/"
-  version "0.1.1"
+  version "0.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ynqa/diffy/releases/download/v0.1.1/diffy_0.1.1_darwin_amd64.tar.gz"
-    sha256 "43346e4d3dd0e4c04edb0f88de23323c1f94eb663c52927c52a4a822396dada5"
+    url "https://github.com/ynqa/diffy/releases/download/v0.1.2/diffy_0.1.2_darwin_amd64.tar.gz"
+    sha256 "44f6938a1542fcb7e4b64ffee767320cdd00f7faab27e152d24d95c5a0b51a43"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/ynqa/diffy/releases/download/v0.1.1/diffy_0.1.1_linux_amd64.tar.gz"
-      sha256 "4c24c7c49949f62b2d893f9499d60d5698facbb0bbcc0f1c755fd161675572be"
+      url "https://github.com/ynqa/diffy/releases/download/v0.1.2/diffy_0.1.2_linux_amd64.tar.gz"
+      sha256 "002b4cc35a64ca7c1aa0d692d228ef2be90068dd47b89dfbff2e62fb41707db5"
     end
   end
 
