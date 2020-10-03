@@ -7,11 +7,11 @@ class Diffy < Formula
 
   if OS.mac?
     url "https://github.com/ynqa/diffy/releases/download/v0.1.1/diffy_0.1.1_darwin_amd64.tar.gz"
-    sha256 "2c1b64a0e03af32a3a93f211cc3342c682f16e9aab0f4e6c87e8f7cad050e396"
+    sha256 "43346e4d3dd0e4c04edb0f88de23323c1f94eb663c52927c52a4a822396dada5"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/ynqa/diffy/releases/download/v0.1.1/diffy_0.1.1_linux_amd64.tar.gz"
-      sha256 "fcb5832990a893836c2f810536396c0bbba9af88facee9fbc9a12075ccc9b121"
+      sha256 "4c24c7c49949f62b2d893f9499d60d5698facbb0bbcc0f1c755fd161675572be"
     end
   end
 
