@@ -1,20 +1,20 @@
 class Bul < Formula
   desc "Interactive log analyzer for Kubernetes"
-  version "0.1.0"
+  version "0.1.1"
   on_macos do
     on_arm do
-      url "https://github.com/ynqa/bul/releases/download/v0.1.0/bul-aarch64-apple-darwin.tar.xz"
-      sha256 "7a8bf64d4de385e2c6fc44641e7b5952998c8f85210f56c93fcd979d885e6660"
+      url "https://github.com/ynqa/bul/releases/download/v0.1.1/bul-aarch64-apple-darwin.tar.xz"
+      sha256 "be7a3b3774695d50a3e21c1d0ba6c9d8e3078059785c5ce1919b6ae192dd5915"
     end
     on_intel do
-      url "https://github.com/ynqa/bul/releases/download/v0.1.0/bul-x86_64-apple-darwin.tar.xz"
-      sha256 "4babe75ed33e760ddffddc3818a3e83bf550741904b04482644622f5179cd03b"
+      url "https://github.com/ynqa/bul/releases/download/v0.1.1/bul-x86_64-apple-darwin.tar.xz"
+      sha256 "cec22cc21e1fdd2106a093f1bc57e0c2338e31112634f0bcf46c16f90540ed11"
     end
   end
   on_linux do
     on_intel do
-      url "https://github.com/ynqa/bul/releases/download/v0.1.0/bul-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "c7e6bfa9e0c711a81551b3747a821eeb8689e695e5ef918361298e3303fa7352"
+      url "https://github.com/ynqa/bul/releases/download/v0.1.1/bul-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "796a4d7da8e8389163297d91d6fc96cf6d3a5291870b3187cb8f41ac820a8c09"
     end
   end
   license "MIT"
