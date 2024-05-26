@@ -1,14 +1,14 @@
 class Jnv < Formula
   desc "JSON navigator and interactive filter leveraging jq"
-  version "0.2.2"
+  version "0.2.3"
   on_macos do
-    url "https://github.com/ynqa/jnv/releases/download/v0.2.2/jnv-x86_64-apple-darwin.tar.xz"
-    sha256 "1ab1562bb085d0f71d2f491f9ae96151f4cc3eaf9511c056ecf522f2d7ce9b15"
+    url "https://github.com/ynqa/jnv/releases/download/v0.2.3/jnv-x86_64-apple-darwin.tar.xz"
+    sha256 "9c2b3f6b57a4b7ac438414717ffca075537df1e4a1c535dc28f16702e9037cbb"
   end
   on_linux do
     on_intel do
-      url "https://github.com/ynqa/jnv/releases/download/v0.2.2/jnv-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "087f6af17115a0fa0e52b7b91bc7f89b3a3e4b7aa6011447cfaf32a5024edb4a"
+      url "https://github.com/ynqa/jnv/releases/download/v0.2.3/jnv-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "306a055af3b7ea5eb9fbc696deb9196e52d6216c081a0a7db1d42f33fdf8bb05"
     end
   end
   license "MIT"
