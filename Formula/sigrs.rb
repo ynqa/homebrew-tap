@@ -1,20 +1,20 @@
 class Sigrs < Formula
   desc "Interactive grep (for streaming)"
-  version "0.1.3"
+  version "0.1.4"
   on_macos do
     on_arm do
-      url "https://github.com/ynqa/sig/releases/download/v0.1.3/sigrs-aarch64-apple-darwin.tar.xz"
-      sha256 "108f93df9e8f59d4ee01f6d22809ca6c52b51aa059c9131652c358828f161ae8"
+      url "https://github.com/ynqa/sig/releases/download/v0.1.4/sigrs-aarch64-apple-darwin.tar.xz"
+      sha256 "3266eb902d5270cf54a75f8aaf87032d919bd5f9ac4a2c1397f1f9cc988a9317"
     end
     on_intel do
-      url "https://github.com/ynqa/sig/releases/download/v0.1.3/sigrs-x86_64-apple-darwin.tar.xz"
-      sha256 "dc26837695edfb5dc7db73d44e2001cc06b1da2326645e75ec57e36d8b93c6c4"
+      url "https://github.com/ynqa/sig/releases/download/v0.1.4/sigrs-x86_64-apple-darwin.tar.xz"
+      sha256 "c790c24108b6c7b5f33dce893096be10846eaff783c39490fa82170ea41899b0"
     end
   end
   on_linux do
     on_intel do
-      url "https://github.com/ynqa/sig/releases/download/v0.1.3/sigrs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "99e8b40f6f16ce5481e40ffb1c10c263ce006e656ff652d1a7b7bfc67e4a6162"
+      url "https://github.com/ynqa/sig/releases/download/v0.1.4/sigrs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "30de373c237511e44d4a7dd19dd3ee485f5ab5c50a2a4b0ac223f7c680871d79"
     end
   end
   license "MIT"
