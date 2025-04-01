@@ -1,25 +1,33 @@
 class Jnv < Formula
   desc "JSON navigator and interactive filter leveraging jq"
   homepage "https://github.com/ynqa/jnv"
-  version "0.5.0"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ynqa/jnv/releases/download/v0.5.0/jnv-aarch64-apple-darwin.tar.xz"
-      sha256 "d08821646ea8a0c22d7c4dfa749cf9046b902777c6e1dd07b3e2c67c1017c549"
+      url "https://github.com/ynqa/jnv/releases/download/v0.6.0/jnv-aarch64-apple-darwin.tar.xz"
+      sha256 "6b0a38c3c31f30b87ad411327d80bec0e5b2087ab3e4653ae8fa25876896852a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ynqa/jnv/releases/download/v0.5.0/jnv-x86_64-apple-darwin.tar.xz"
-      sha256 "45f38970c364f5f9055bad651eff967d00a725b26f223da643ffd24f7ace71de"
+      url "https://github.com/ynqa/jnv/releases/download/v0.6.0/jnv-x86_64-apple-darwin.tar.xz"
+      sha256 "9d3e9718750870c7d2c807a2b585ff4694e6405af54277674ea47ae6b2731023"
     end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ynqa/jnv/releases/download/v0.5.0/jnv-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "14c6a3c8a985e107e8fbb7e014fac0d4e256df31c6f95c6cf004bdd0ea0f0dd3"
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/ynqa/jnv/releases/download/v0.6.0/jnv-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "10c2227de7097caff4074d3b8dd506b826c1419a065edfaa9a463ef4ccfe31e6"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/ynqa/jnv/releases/download/v0.6.0/jnv-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "6896d748c315b066f2a6dbe73e3a5540353c8c960184f374d7758c5e7e30906a"
+    end
   end
   license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
+    "aarch64-unknown-linux-gnu":         {},
+    "armv7-unknown-linux-gnueabihf":     {},
     "x86_64-apple-darwin":               {},
     "x86_64-pc-windows-gnu":             {},
     "x86_64-unknown-linux-gnu":          {},
@@ -45,6 +53,7 @@ class Jnv < Formula
   def install
     bin.install "jnv" if OS.mac? && Hardware::CPU.arm?
     bin.install "jnv" if OS.mac? && Hardware::CPU.intel?
+    bin.install "jnv" if OS.linux? && Hardware::CPU.arm?
     bin.install "jnv" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
