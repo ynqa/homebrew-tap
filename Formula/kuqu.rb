@@ -1,20 +1,20 @@
 class Kuqu < Formula
   desc "SQL for Kubernetes resources"
   homepage "https://github.com/ynqa/kuqu"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ynqa/kuqu/releases/download/v0.1.0/kuqu-aarch64-apple-darwin.tar.xz"
-      sha256 "7d6db00d8c5ba76eadb8fd5a62a8fdb80b33c99fbff8046c391930698e8d3474"
+      url "https://github.com/ynqa/kuqu/releases/download/v0.1.1/kuqu-aarch64-apple-darwin.tar.xz"
+      sha256 "45dc74434de7f1a8f54422c6930cd0b73e0dc88a9244c700161c9d8957078e0d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ynqa/kuqu/releases/download/v0.1.0/kuqu-x86_64-apple-darwin.tar.xz"
-      sha256 "958107a97db23122502f83359b496cad38126b7f6213292d78de439018571343"
+      url "https://github.com/ynqa/kuqu/releases/download/v0.1.1/kuqu-x86_64-apple-darwin.tar.xz"
+      sha256 "a41cddb91c8f211276912a836153fd0ad81a5336025158345be19b33ca7cfb04"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ynqa/kuqu/releases/download/v0.1.0/kuqu-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "f12d26a705348ad0df31ae48ef19c11885d64fdd2eee09f62d02c22e4f1b3e4c"
+    url "https://github.com/ynqa/kuqu/releases/download/v0.1.1/kuqu-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "db065f0be1427f152c396e2f1a0a9498f6a87c0f205851c610511e0fd6101062"
   end
   license "MIT"
 
