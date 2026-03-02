@@ -1,25 +1,33 @@
 class Sigrs < Formula
   desc "Interactive grep (for streaming)"
   homepage "https://github.com/ynqa/sig"
-  version "0.2.1"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ynqa/sig/releases/download/v0.2.1/sigrs-aarch64-apple-darwin.tar.xz"
-      sha256 "52edd801105b93bf3d1be60fbc7c429e0271311af0c08402161ebfa55e4090ce"
+      url "https://github.com/ynqa/sig/releases/download/v0.3.0/sigrs-aarch64-apple-darwin.tar.xz"
+      sha256 "1f40b450f49af0ba15f3be51c44130e5e2efd99e51858e7790f7e6b2c393bb4d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ynqa/sig/releases/download/v0.2.1/sigrs-x86_64-apple-darwin.tar.xz"
-      sha256 "cd888d60761b3ac430d98d7c17e18bdfeb3c94087d11fc0a903827c1debc4542"
+      url "https://github.com/ynqa/sig/releases/download/v0.3.0/sigrs-x86_64-apple-darwin.tar.xz"
+      sha256 "a5ceb2ecc5b8f9dd469c2210517e2124efdc972f1158f09be6ecca86b5e2ec56"
     end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ynqa/sig/releases/download/v0.2.1/sigrs-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "e45a57c785fa484e888116a44554519506231401e17f817346934c77652d4b64"
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/ynqa/sig/releases/download/v0.3.0/sigrs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "6a01f132019871f21997a50290ec84c6b67e583aac8ed5a33d56f36e0b2ddfbb"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/ynqa/sig/releases/download/v0.3.0/sigrs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b43710f0b36a3237edd8d1dbc08aad5377c0c8b1ccb2500dab154bb00a6bb57f"
+    end
   end
   license "MIT"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
+    "aarch64-pc-windows-gnu":            {},
+    "aarch64-unknown-linux-gnu":         {},
     "x86_64-apple-darwin":               {},
     "x86_64-pc-windows-gnu":             {},
     "x86_64-unknown-linux-gnu":          {},
@@ -45,6 +53,7 @@ class Sigrs < Formula
   def install
     bin.install "sig" if OS.mac? && Hardware::CPU.arm?
     bin.install "sig" if OS.mac? && Hardware::CPU.intel?
+    bin.install "sig" if OS.linux? && Hardware::CPU.arm?
     bin.install "sig" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
